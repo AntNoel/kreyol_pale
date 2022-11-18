@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     # 3rd-party apps
     # local apps
     "users.apps.UsersConfig",
+    "words.apps.WordsConfig",
+    "pages.apps.PagesConfig",
 ]
 
 MIDDLEWARE = [
@@ -61,7 +63,7 @@ ROOT_URLCONF = "kreyol_pale.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
