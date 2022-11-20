@@ -1,5 +1,10 @@
 {% extends 'base.html' %} {% block content %}
-<section>hero with search</section>
+<section>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" />
+  </form>
+</section>
 <section>Popular words</section>
 <section>All words...</section>
 {% endblock content %}
