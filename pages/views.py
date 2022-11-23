@@ -48,4 +48,4 @@ class HomePageView(View):
         # print(search_word)
         # return reverse("home")
         # return HttpResponseRedirect(reverse("word_template", args=[search_word]))
-        return HttpResponseRedirect(reverse("word_template"))
+        return HttpResponseRedirect(reverse("word_template", args=[search_word]))

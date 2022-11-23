@@ -80,6 +80,14 @@ TEMPLATES = [
 WSGI_APPLICATION = "kreyol_pale.wsgi.application"
 
 
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+        "LOCATION": "kp_cache_table",
+    }
+}
+
+
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
