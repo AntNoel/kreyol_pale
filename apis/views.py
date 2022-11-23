@@ -9,3 +9,8 @@ from .serializers import WordSerializer
 class WordAPIView(generics.ListAPIView):
     queryset = Word.objects.all()
     serializer_class = WordSerializer
+
+
+class WordDetailAPIView(generics.RetrieveAPIView):
+    queryset = Word.objects.all()
+    serializer_class = WordSerializer
