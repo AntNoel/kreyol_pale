@@ -43,10 +43,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 3rd-party apps
+    "rest_framework",
     # local apps
     "users.apps.UsersConfig",
     "words.apps.WordsConfig",
     "pages.apps.PagesConfig",
+    "apis.apps.ApisConfig",
 ]
 
 MIDDLEWARE = [
@@ -120,6 +122,11 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticated"],
+}
 
 
 # Internationalization
