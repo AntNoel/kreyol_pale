@@ -1,30 +1,26 @@
+import * as components from './components.js';
+
 const BASE_WORD_ROUTE = `${window.location.origin}/word`;
 
-//Implement later when i have more of an idea of how this is going to work as a whole
-// window.onpopstate = () => {
-//   rootDiv.innerHTML = routes[window.location.pathname];
-// };
+//Event listener for the search bar
 const handleRouting = (e, pathname) => {
   e.preventDefault();
   window.history.pushState({}, pathname, BASE_WORD_ROUTE + pathname);
+  loadPage();
 };
 
-const linkComponent = () => {
-  const element = document.createElement('a');
-  element.innerHTML = 'Click me';
-  element.href = '';
-  element.onclick = function (e) {
-    handleRouting(e, '/test');
-  };
-  return element;
-};
+//This is going to be used to add all of the initial elements to the page
+const buildPage = () => {};
 
-document.body.appendChild(linkComponent());
+//Updates the text of the word elements on the page
+const updatePageContent = () => {};
 
-const loadPage = () => {
-  //Load loading
+const loadPage = async (searchWord) => {
+  //Load loading spinner
   //Get data
-  //Update the url
+  wordData = await getData(id);
   //Update the page content
+  updatePageContent();
 };
-load_page();
+
+buildPage();
