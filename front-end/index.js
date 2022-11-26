@@ -1,5 +1,5 @@
-import * as components from './components.js';
-
+import * as components from './components';
+import { searchInputComponent } from './components';
 const BASE_WORD_ROUTE = `${window.location.origin}/word`;
 
 //Event listener for the search bar
@@ -10,7 +10,9 @@ const handleRouting = (e, pathname) => {
 };
 
 //This is going to be used to add all of the initial elements to the page
-const buildPage = () => {};
+// const buildPage = () => {
+//   document.body.appendChild(components.searchInputComponent(handleRouting));
+// };
 
 //Updates the text of the word elements on the page
 const updatePageContent = () => {};

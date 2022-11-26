@@ -4,7 +4,7 @@
 const searchInputComponent = (func) => {
   const element = document.createElement('input');
   element.type = 'text';
-  element.onclick = function (e) {
+  element.onsubmit = function (e) {
     func(e);
   };
   return element;
@@ -47,4 +47,5 @@ const wordPhraseComponent = (text) => {
   return createParagraphComponent(text);
 };
 
+export { searchInputComponent, wordContainerComponent, wordHeadingComponent };
 //ACCOUNT PAGES COMPONENTS

@@ -1,3 +1,10 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
+<input class="search-input" type="text" />
+<section class="container word-container">
+  <h2 class="word-heading"></h2>
+  <p class="word-definition"></p>
+  <p class="word-example"></p>
+  <p class="word-phrase"></p>
+</section>
 <script src="{% static 'js/index-bundle.js' %}"></script>
 {% endblock content %}
