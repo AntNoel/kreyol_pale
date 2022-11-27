@@ -1,7 +1,9 @@
 import * as components from './components';
 import { searchInputComponent } from './components';
 const BASE_WORD_ROUTE = `${window.location.origin}/word`;
-
+const URLS = {
+  BASE_WORD_ENDPOINT: '/api',
+};
 //Event listener for the search bar
 const handleRouting = (e, pathname) => {
   e.preventDefault();
@@ -17,12 +19,38 @@ const handleRouting = (e, pathname) => {
 //Updates the text of the word elements on the page
 const updatePageContent = () => {};
 
+const getData = async (search_word) => {
+  try {
+    const response = await fetch(`${URLS.BASE_WORD_ENDPOINT}/${search_word}`);
+    const jsonResponse = await response.json();
+    return jsonResponse;
+  } catch (error) {
+    // console.log(error);
+  }
+};
+
 const loadPage = async (searchWord) => {
   //Load loading spinner
   //Get data
-  wordData = await getData(id);
+  const wordData = await getData();
   //Update the page content
   updatePageContent();
 };
 
-buildPage();
+const initialPageSetup = () => {
+  //Add event listener to search bar
+  document
+    .getElementsByClassName('search-input')
+    .addEventListener('search', (e) => {
+      console.log(e);
+    });
+};
+
+const initialPageLoad = async () => {
+  const word = window.location.pathname.split('/').pop();
+  const wordData = await getData(word);
+  console.log('WordData', wordData);
+};
+
+initialPageSetup();
+initialPageLoad();
