@@ -5,10 +5,11 @@ const URLS = {
   BASE_WORD_ENDPOINT: '/api',
 };
 //Event listener for the search bar
-const handleRouting = (e, pathname) => {
+const handleRouting = (e) => {
+  const pathname = `/${e.target.value}`;
   e.preventDefault();
   window.history.pushState({}, pathname, BASE_WORD_ROUTE + pathname);
-  loadPage();
+  loadPage(e.target.value);
 };
 
 //This is going to be used to add all of the initial elements to the page
@@ -17,7 +18,6 @@ const handleRouting = (e, pathname) => {
 // };
 
 //Updates the text of the word elements on the page
-const updatePageContent = () => {};
 
 const getData = async (search_word) => {
   try {
@@ -29,27 +29,44 @@ const getData = async (search_word) => {
   }
 };
 
+const initialPageSetup = () => {
+  //Add event listener to search bar
+  document.querySelector('.search-input').addEventListener('search', (e) => {
+    handleRouting(e);
+  });
+};
+
+const updatePageContent = (word_obj) => {
+  if (word.word_obj.detail) {
+    document.querySelector(
+      '.word-heading'
+    ).textContent = `This word doesn't exist...`;
+  }
+  const formatted_word_variation_string = word_obj.variations.replaceAll(
+    ' ',
+    ','
+  );
+  document.querySelector('.word-heading').textContent = `${word_obj.name}${
+    formatted_word_variation_string ? ',' + formatted_word_variation_string : ''
+  }`;
+  document.querySelector('.word-definition').textContent = word_obj.definition;
+  document.querySelector('.word-example').textContent = word_obj.examples;
+  document.querySelector('.word-phrase').textContent = word_obj.phrases;
+};
+
 const loadPage = async (searchWord) => {
   //Load loading spinner
   //Get data
-  const wordData = await getData();
-  //Update the page content
-  updatePageContent();
-};
+  const wordData = await getData(searchWord);
 
-const initialPageSetup = () => {
-  //Add event listener to search bar
-  document
-    .getElementsByClassName('search-input')
-    .addEventListener('search', (e) => {
-      console.log(e);
-    });
+  //Update the page content
+  updatePageContent(wordData);
 };
 
 const initialPageLoad = async () => {
   const word = window.location.pathname.split('/').pop();
   const wordData = await getData(word);
-  console.log('WordData', wordData);
+  updatePageContent(wordData);
 };
 
 initialPageSetup();

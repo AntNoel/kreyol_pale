@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "words.apps.WordsConfig",
     "pages.apps.PagesConfig",
     "apis.apps.ApisConfig",
+    "posts.apps.PostsConfig",
 ]
 
 MIDDLEWARE = [

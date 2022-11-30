@@ -27,4 +27,5 @@ urlpatterns = [
     path("word/", include("words.urls")),
     path("api-auth/", include("rest_framework.urls")),
     path("api/", include("apis.urls")),
+    path("articles", include("posts.urls")),
 ]
