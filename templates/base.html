@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,12 +12,13 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
     <title>Kreyòl Pale</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="{% url 'home' %}">
             {% comment %}
@@ -44,7 +46,7 @@
               >
                 Words
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="#">Popular</a></li>
                 <li><a class="dropdown-item" href="#">Random</a></li>
               </ul>

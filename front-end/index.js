@@ -37,7 +37,7 @@ const initialPageSetup = () => {
 };
 
 const updatePageContent = (word_obj) => {
-  if (word.word_obj.detail) {
+  if (word_obj.detail) {
     document.querySelector(
       '.word-heading'
     ).textContent = `This word doesn't exist...`;

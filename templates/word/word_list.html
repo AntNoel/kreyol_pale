@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="container">
+  <ul class="list-unstyled card-columns">
+    {% for word in words %}
+    <li class="text-center">
+      <a
+        href="{% url 'word_template' word.name %}"
+        class="list-group-item list-group-item-action"
+        >{{ word.name }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock content %}
