@@ -10,7 +10,7 @@
   <h1>New Words</h1>
   {% endcomment %}
   <div class="card card-div border-dark text-dark">
-    <div class="card-header">New Words</div>
+    <div class="card-header">New</div>
     <div class="card-body">
       <ul class="list-group">
         {% for word in new_words %}
@@ -35,7 +35,30 @@
     </div>
   </div>
 </section>
-<section class="text-center">
-  <h2><a href="{% url 'word_list' %}">All Words</a></h2>
+<section class="word-section">
+  <div class="card card-div border-dark text-dark">
+    <div class="card-header">Popular</div>
+    <div class="card-body">
+      <ul class="list-group">
+        {% for word in popular_words %}
+        <a
+          href="{% url 'word_template' word.name %}"
+          class="list-group-item list-group-item-action"
+        >
+          {{ word.name }}
+        </a>
+        {% endfor %} {% comment %}
+        <a href="#" class="list-group-item list-group-item-action"
+          >A second link item</a
+        >
+        <a href="#" class="list-group-item list-group-item-action"
+          >A third link item</a
+        >
+        <a href="#" class="list-group-item list-group-item-action"
+          >A fourth link item</a
+        >
+        {% endcomment %}
+      </ul>
+    </div>
 </section>
 {% endblock content %}

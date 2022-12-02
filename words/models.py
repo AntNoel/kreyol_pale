@@ -12,3 +12,12 @@ class Word(models.Model):
     examples = models.TextField(default="")
     approved_status = models.BooleanField(default=True)
     created_date = models.DateTimeField(auto_now=True, blank=True)
+    likes = models.PositiveIntegerField(default=0, blank=True)
+    image = models.ImageField(upload_to="uploads/images", blank=True)
+
+
+class Comment(models.Model):
+    # author = models.ForeignKey(to="word",on_delete=)
+    content = models.TextField()
+    published_date = models.DateField(blank=True)
+    approved_status = models.BooleanField(default=False)
