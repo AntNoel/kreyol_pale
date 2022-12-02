@@ -4,6 +4,7 @@ from django.views import View
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
+from words.models import Word
 
 # from django.views.generic import FormView
 
@@ -40,7 +41,8 @@ class PostHomeView(FormView):
 
 class HomePageView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, "home.html", {})
+        new_words = Word.objects.order_by("created_date")[:5]
+        return render(request, "home.html", {"new_words": new_words})
 
     def post(self, request, *args, **kwargs):
         search_word = request.POST["word"]

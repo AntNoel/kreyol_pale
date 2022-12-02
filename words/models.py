@@ -11,3 +11,4 @@ class Word(models.Model):
     phrases = models.TextField(default="", blank=True)
     examples = models.TextField(default="")
     approved_status = models.BooleanField(default=True)
+    created_date = models.DateTimeField(auto_now=True, blank=True)

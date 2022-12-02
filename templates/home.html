@@ -1,14 +1,41 @@
 {% extends 'base.html' %} {% block content %}
-<section>
-  <form method="POST">
+<section class="home-hero">
+  <form method="POST" class="search-bar-form">
     {% csrf_token %}
-    <input name="word" type="text" />
+    <input class="form-control form-control-md" name="word" type="text" />
   </form>
 </section>
-<section>
+<section class="word-section">
+  {% comment %}
   <h1>New Words</h1>
+  {% endcomment %}
+  <div class="card card-div border-dark text-dark">
+    <div class="card-header">New Words</div>
+    <div class="card-body">
+      <ul class="list-group">
+        {% for word in new_words %}
+        <a
+          href="{% url 'word_template' word.name %}"
+          class="list-group-item list-group-item-action"
+        >
+          {{ word.name }}
+        </a>
+        {% endfor %} {% comment %}
+        <a href="#" class="list-group-item list-group-item-action"
+          >A second link item</a
+        >
+        <a href="#" class="list-group-item list-group-item-action"
+          >A third link item</a
+        >
+        <a href="#" class="list-group-item list-group-item-action"
+          >A fourth link item</a
+        >
+        {% endcomment %}
+      </ul>
+    </div>
+  </div>
 </section>
-<section>
+<section class="text-center">
   <h2><a href="{% url 'word_list' %}">All Words</a></h2>
 </section>
 {% endblock content %}
