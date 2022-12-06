@@ -42,7 +42,7 @@ class PostHomeView(FormView):
 class HomePageView(View):
     def get(self, request, *args, **kwargs):
         new_words = Word.objects.order_by("created_date")[:5]
-        popular_words = Word.objects.order_by("likes")[:5]
+        popular_words = Word.objects.order_by("-likes")[:5]
         return render(
             request,
             "home.html",
