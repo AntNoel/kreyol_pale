@@ -15,9 +15,8 @@ class Word(models.Model):
     likes = models.IntegerField(default=0, blank=True)
     image = models.ImageField(upload_to="uploads/images", blank=True)
 
-
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
 
 
 class Comment(models.Model):

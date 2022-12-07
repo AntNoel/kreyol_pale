@@ -23,10 +23,11 @@
 }
 
 .word-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .word-section a {
   text-decoration: none;
+}
+
+.word-section img {
+  height: 190px;
 }

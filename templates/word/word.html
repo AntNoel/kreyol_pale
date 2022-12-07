@@ -5,19 +5,20 @@
     type="search"
   />
 </section>
-<section class="container word-container text-center">
-  <h1 class="word-heading"></h1>
-  <p class="word-definition"></p>
-  <h3>Examples</h3>
-  <p class="word-example"></p>
-  <h3>Phrases</h3>
-  <p class="word-phrase"></p>
-</section>
-<section class="text-center">
-  <button class="likes-button btn btn-light">👍</button>
-  {% comment %} <button class="btn btn-light">Favorite ❤️</button> {% endcomment
-  %}
-</section>
+<div class="card text-center w-75 mx-auto mt-2">
+  <section class="container word-container text-center">
+    <h1 class="word-heading"></h1>
+    <p class="word-definition"></p>
+    <h3>Examples</h3>
+    <p class="word-example"></p>
+    <h3>Phrases</h3>
+    <p class="word-phrase"></p>
+  </section>
+  <section class="text-center">
+    <button class="likes-button btn btn-light">👍</button>
+  </section>
+</div>
 
 <script src="{% static 'js/index-bundle.js' %}"></script>
-{% endblock content %}
+{% endblock content %} {% comment %}
+<button class="btn btn-light">Favorite ❤️</button> {% endcomment %}

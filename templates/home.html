@@ -7,42 +7,36 @@
 </section>
 <section>
   <h1 class="text-center">New</h1>
-  <div class="word-section">
+  <div class="word-section row row-cols-1 row-cols-md-4 g-5">
     {% for word in new_words %}
-    <a href="{% url 'word_template' word.name.lower %}">
-      <div class="card" style="width: 18rem">
-        <img
-          src="static/images/hero-image.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body text-center">
-          <h5 class="card-title">{{ word.name }}</h5>
+    <div class="col">
+      <a href="{% url 'word_template' word.name.lower %}">
+        <div class="card" style="width: 18rem">
+          <img src="{{ word.image.url }}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ word.name }}</h5>
+          </div>
         </div>
-      </div>
-    </a>
-
+      </a>
+    </div>
     {% endfor %}
   </div>
 </section>
 <section>
   <h1 class="text-center">Popular</h1>
-  <div class="word-section">
+  <div class="word-section row row-cols-1 row-cols-md-4 g-5">
     {% for word in popular_words %}
-    <a href="{% url 'word_template' word.name.lower %}">
-      <div class="card" style="width: 18rem">
-        <img
-          src="static/images/hero-image.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body text-center">
-          <h5 class="card-title">{{ word.name }}</h5>
-          <p class="card-text">{{ word.likes }} 👍</p>
+    <div class="col">
+      <a href="{% url 'word_template' word.name.lower %}">
+        <div class="card" style="width: 18rem">
+          <img src="{{ word.image.url }}" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ word.name }}</h5>
+            <p class="card-text">{{ word.likes }} 👍</p>
+          </div>
         </div>
-      </div>
-    </a>
-
+      </a>
+    </div>
     {% endfor %}
   </div>
 </section>

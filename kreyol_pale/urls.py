@@ -15,11 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings  # new
+from django.conf.urls.static import static  # new
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     # Django admin
     path("admin/", admin.site.urls),
     # User management
+    path(
+        "users/login/",
+        auth_views.LoginView.as_view(
+            template_name="registration/login.html", redirect_authenticated_user=True
+        ),
+        name="login",
+    ),
     path("users/", include("django.contrib.auth.urls")),
     # Local apps
     path("users/", include("users.urls")),
@@ -29,3 +39,6 @@ urlpatterns = [
     path("api/", include("apis.urls")),
     path("articles", include("posts.urls")),
 ]
+
+if settings.DEBUG:  # new
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

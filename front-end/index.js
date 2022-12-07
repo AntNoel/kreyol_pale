@@ -98,10 +98,16 @@ const initialPageSetup = () => {
 
 const updatePageContent = (word_obj) => {
   console.log(word_obj);
-  if (word_obj.detail) {
+  if (word_obj.detail == 'Not found.') {
     document.querySelector(
       '.word-heading'
     ).textContent = `This word doesn't exist...`;
+
+    document.querySelector('.word-definition').textContent = '';
+    document.querySelector('.word-example').textContent = '';
+    document.querySelector('.word-phrase').textContent = '';
+    document.querySelector('.likes-button').textContent = '';
+    return;
   }
   const formatted_word_variation_string = word_obj.variations.replaceAll(
     ' ',

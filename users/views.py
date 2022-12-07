@@ -3,6 +3,9 @@ from django.views.generic.edit import CreateView
 from django.contrib.auth import get_user_model
 from .forms import CustomUserCreationForm
 from django.urls import reverse_lazy
+from django.contrib.auth import login
+from django.views.generic.base import View
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 User = get_user_model()
@@ -22,6 +25,9 @@ class SignUpPageView(CreateView):
         return super().form_valid(form)
 
 
-# not sure how to do this?
-# class LoginRedirectView(RedirectView):
-#     pattern_name = "login"
+class LoginRedirectView(View):
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return HttpResponseRedirect()
+        else:
+            return login(request, *args, **kwargs)
