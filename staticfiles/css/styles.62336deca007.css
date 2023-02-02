@@ -1,0 +1,33 @@
+.card-columns {
+  column-count: 3;
+}
+
+.home-hero {
+  background-image: url("/static/images/hero-image.3d9532d51e86.jpg");
+  background-color: 'green';
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 150px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar-form {
+  width: 50%;
+}
+
+.card-div {
+  width: 95%;
+}
+
+.word-section {
+}
+.word-section a {
+  text-decoration: none;
+}
+
+.word-section img {
+  height: 190px;
+}

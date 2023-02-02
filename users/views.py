@@ -25,9 +25,9 @@ class SignUpPageView(CreateView):
         return super().form_valid(form)
 
 
-class LoginRedirectView(View):
-    def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return HttpResponseRedirect()
-        else:
-            return login(request, *args, **kwargs)
+# class LoginRedirectView(View):
+#     def get(self, request, *args, **kwargs):
+#         if request.user.is_authenticated:
+#             return HttpResponseRedirect()
+#         else:
+#             return login(request, *args, **kwargs)
