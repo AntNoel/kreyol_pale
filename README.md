@@ -1,6 +1,6 @@
 # KreyolPale
 
-![Project Image](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDhiODE2NmEwOWJjZTVlN2NiNTk2ZTJiNzAxYTY3ZDYzMmZkMzc4MiZjdD1n/0vjkj0FHGrSXXq7h5E/giphy.gif)
+![Project Image](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFiM2Q1ZjUwMzA2M2FiOTA3N2I4ZWZlMTYxZjA3ZTU2N2RkYjQ2MiZjdD1n/1yb7uvqSkzKxtwXE94/giphy.gif)
 
 > Learn some Haitian Creole words! [Kreyol Pale](https://kreyol-pale.fly.dev/)
 
