@@ -29,7 +29,7 @@ A Haitian Creole-English language dictionary web application that uses Django.
 - Babel
 - Bootstrap
 
-[Back To The Top](#kreyolpale)
+[Back To The Top](#kreyol-pale)
 
 ---
 
@@ -62,7 +62,7 @@ python manage.py runserver
 - Babel
   - Compiles written Javascript files so that newer features can be used and work correctly on older browsers
 
-[Back To The Top](#kreyolpale)
+[Back To The Top](#kreyol-pale)
 
 ---
 
@@ -74,7 +74,7 @@ python manage.py runserver
 - [Bootstrap](https://getbootstrap.com/)
 - [Webpack](https://webpack.js.org)
 
-[Back To The Top](#kreyolpale)
+[Back To The Top](#kreyol-pale)
 
 ---
 
@@ -102,7 +102,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[Back To The Top](#kreyolpale)
+[Back To The Top](#kreyol-pale)
 
 ---
 
@@ -111,4 +111,4 @@ SOFTWARE.
 - LinkedIn - [Anthony Noel](https://www.linkedin.com/in/anthonyjnoel/)
 - Github - [AntNoel](https://github.com/AntNoel)
 
-[Back To The Top](#kreyolpale)
+[Back To The Top](#kreyol-pale)
