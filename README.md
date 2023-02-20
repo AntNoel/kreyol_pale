@@ -1,4 +1,4 @@
-# KreyolPale
+# Kreyol Pale
 
 ![Project Image](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGZmYTNhYTkzNDI0YWYzNDYxNzU2ZDEzM2YzMTYwMGRiODQ2NGY0ZiZjdD1n/QlIfd9pGfQKwjlsxRr/giphy.gif)
 
