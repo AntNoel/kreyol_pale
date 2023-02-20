@@ -73,7 +73,8 @@ python manage.py runserver
 - [Babel](https://babeljs.io/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Webpack](https://webpack.js.org)
-  [Back To The Top](#kreyolpale)
+
+[Back To The Top](#kreyolpale)
 
 ---
 
