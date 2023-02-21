@@ -108,6 +108,7 @@ SOFTWARE.
 
 ## Author Info
 
+- Website - [Anthony Noel](https://anthonyjnoel.com/)
 - LinkedIn - [Anthony Noel](https://www.linkedin.com/in/anthonyjnoel/)
 - Github - [AntNoel](https://github.com/AntNoel)
 
